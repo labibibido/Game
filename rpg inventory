@@ -1,0 +1,82 @@
+# Course: CS 30
+# Period: 2
+# Date created: 20/11/06
+# Date last modified: 20/11/14
+# Name: Dora Liu
+# Description: RPG inventory
+
+# list 1
+rooms = ['auditorium', 'libaruary', 'slave room']
+
+# append
+rooms.append('soup room')
+print(rooms)
+message = f"\nYou can find more info in the {rooms[1]}."
+print(message)
+
+# insert
+print('\n'*2)
+rooms.insert(1, 'kichen')
+print(rooms)
+message = f"\nYou can find more soup in the {rooms[1]}."
+print(message)
+
+# lenth
+print('\n'*2)
+print(f"\t There are {len(rooms)} items in the list.")
+
+# list 2
+print ('\n'*2)
+notes = [
+    'map', 'note soup',
+    'note slave',
+    'note libaruary',
+    'note audi',
+    'note kichen',
+    'note guard'
+    ]
+# del
+del notes[4]
+print(notes)
+print(f"\nThere is a note: {notes[1]}.")
+
+# pop
+print('\n'*2)
+popped_notes = notes.pop(4)
+print(notes)
+DNE_notes = notes.pop()
+print(f"\nThere isn't a note about: {DNE_notes}.")
+
+# remove
+print('\n'*2)
+notes.remove('map')
+print(notes)
+message = f"\nThat's everything in list notes:{notes}."
+print(message)
+
+# sort
+print('\n'*2)
+notes.sort()
+print(f"\nThe list after sort:\n\t{notes}.")
+
+# lenth
+print('\n'*2)
+print(f"\t There are {len(notes)} items in the list.")
+
+# list 3
+print('\n'*2)
+others = ['soup', 'book', 'poison', 'gun', 'spare soup', 'candle', 'map']
+
+# sorted
+print("The original list:")
+print(others)
+print("\n The sorted list:")
+print(sorted(others))
+
+# reverse
+others.reverse()
+print(f"\nThe reverse list:\n {others}.")
+
+# lenth
+print('\n'*2)
+print(f"\t There are {len(others)} items in the list.")
