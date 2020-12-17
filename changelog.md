@@ -6,3 +6,7 @@ v1.0
 
 v1.1
 - Added the nested dictionary to the main file.
+
+v1.2
+- Added the RPG Continous Game Play to the main file
+
