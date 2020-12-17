@@ -1,0 +1,66 @@
+# Course: CS 30
+# Period: 2
+# Date created: 20/12/10
+# Date last modified: 20/12/16
+# Name: Dora Liu
+# Description:  RPG Continous Game Play
+
+# Set active True
+active = True
+
+use = ['use', 'u']   # Command list for healing
+escape = ['escape', 'e']   # Command list for escaping
+backpack = ['backpack', 'b']   # Command list for backpack
+stop = ['stop', 's']
+quit = ['quit', 'q']    # Command list to quit the game
+north = ['north', 'N'] 
+south = ['south', 'S']
+east = ['east', 'E']
+west = ['west', 'W']
+
+# Show the boss player encountering
+print('''\n\t\t\t>>> Chaugnar Faugn <<<\n\n\t\t\tOwner of the World!!!\n\n''')
+# Let the player choose one of the actions
+print('\nYou can choose one of the following directions:')
+print('* North (N)\n* South (S)\n* East (E)\n* West (W)')
+print('\nYou can choose one of the following actions:')
+print('* Use (u)\n* Escape (e)\n* View Backpack (b)\n* quit (q)\n')
+
+
+
+while active:
+  # Ask player to play again if killed by Slime
+  while True:
+      action = '* Action >>>'
+      action = input(action)
+
+      if action in north:
+          print(f'\n Go north')
+      elif action in south:
+          print(f'\n Go south')
+      elif action in east:
+          print(f'\n Go east')
+      elif action in west:
+          print(f'\n Go west')                    
+      elif action in use:
+          print('\n- There is nothing you can use in the backpack')
+      elif action in escape:
+          print("\n- You cannot leave the world without drink the poison soup.")
+      elif action in backpack:
+          print('Map:\n* To show you the way')
+          print('The soup:\n* A bowl of "soup"')
+          input('\n- Press Enter back to the fight.\n>>> ')
+      elif action in quit:
+      # Break the loop and stop the game
+        print('\n\n\t\t\t  >>> Game Over <<<\n\n')
+        break
+      else:
+          # Print a message for unexpected command
+          print('\n- Invalid command.')
+
+  if active:
+    action = input('\n- Press Enter to play again.\n-Press s to stop game.\n>>> ')
+    if action in stop:
+      # Break the loop and stop the game
+      print('\n\n\t\t\t  >>> Stop Game <<<\n\n')
+      active = False
