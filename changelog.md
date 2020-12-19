@@ -10,3 +10,5 @@ v1.1
 v1.2
 - Added the RPG Continous Game Play to the main file
 
+v1.3
+- Added the RPG module and map to main file
